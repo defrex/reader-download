@@ -1,0 +1,36 @@
+If you have any questions or comments, please feel free 
+to contact me at defrex0@gmail.com.
+
+reader-download.py will check a specific tag in Google Reader 
+for updates, if there is a .torrent,  it will download it and open it with
+the torent app of your choice. If it's not, it will simply download the 
+file.
+
+Seperate directories can be specified for saving .torrent files and
+any other files. This way you can also download feeds with non-torrent
+enclosures.
+
+Usage: reader-download.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -u USER, --user=USER  Google Reader username. Will prompt if not specified.
+  -p PASSWORD, --password=PASSWORD
+                        Google Reader password. Will prompt if not specified.
+  -t TAG, --tag=TAG     Tag in Google Reader where the torrents are located.
+                        The default is TV.
+  -l TDIR, --torrent-location=TDIR
+                        Directory where the .torents should be saved (without
+                        a trailing slash). The default is current working
+                        directory.
+  -f FDIR, --file-location=FDIR
+                        Directory where non .torents files should be saved
+                        (without a trailing slash). The default is current
+                        working directory.
+  -n, --no-prompt       Flag indicating whether or not to prompt before
+                        downloading files. The default is True.
+  -a APP, --application=APP
+                        If specified, an application will be used to open the
+                        .torrent file.
+
+
