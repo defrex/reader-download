@@ -29,7 +29,7 @@ from optparse import OptionParser
 # edit here to set default values
 user = False # Google Reader username and password
 password = False
-tag = 'video' # the tag or label where the torrent RSS feeds are in Google Reader
+tag = 'hacks' # the tag or label where the torrent RSS feeds are in Google Reader
 savedir = os.getcwd() # where the podcasts should be saved. os.getcwd() is the current working dir. no trailing slashes.
 prompt = True # whether or not to prompt before downloading
 app = False # app with which to open the .torrent
@@ -52,12 +52,15 @@ parser.add_option("-f", "--file-location",
 		help='Directory where non .torents files should be saved (without a trailing slash). The default is current working directory.')
 parser.add_option("-n", '--no-prompt',
 		action="store_false", dest="prompt", default=prompt,
-		help='Flag indicating whether or not to prompt before downloading files.')
+		help='Flag indicating whether or not to prompt before downloading files. The default is %s.' % prompt)
 parser.add_option("-a", '--application',
 		dest="app", default=app,
 		help='If specified, an application will be used to open the .torrent file.')
 		
 (options, args) = parser.parse_args()
+
+options.user = 'aron.jones'
+options.password = 'bokunodaiski'
 
 print 'Running reader-torrent.py at ' + time.strftime('%l:%M:%S %P - %B %e, %G')
 

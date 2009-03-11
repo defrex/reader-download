@@ -18,7 +18,7 @@ Options:
   -p PASSWORD, --password=PASSWORD
                         Google Reader password. Will prompt if not specified.
   -t TAG, --tag=TAG     Tag in Google Reader where the torrents are located.
-                        The default is video.
+                        The default is TV.
   -l TDIR, --torrent-location=TDIR
                         Directory where the .torents should be saved (without
                         a trailing slash). The default is current working
@@ -28,7 +28,7 @@ Options:
                         (without a trailing slash). The default is current
                         working directory.
   -n, --no-prompt       Flag indicating whether or not to prompt before
-                        downloading files.
+                        downloading files. The default is True.
   -a APP, --application=APP
                         If specified, an application will be used to open the
                         .torrent file.
